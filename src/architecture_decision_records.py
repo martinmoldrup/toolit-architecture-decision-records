@@ -9,7 +9,7 @@ from toolit import tool
 logger = logging.getLogger(__name__)
 
 BASE_PATH = pathlib.Path.cwd() / "architecture_decision_records"
-TEMPLATE_PATH = pathlib.Path(__file__).parent / "templates"
+TEMPLATE_PATH = pathlib.Path(__file__).parent
 
 
 def _today() -> str:
