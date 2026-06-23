@@ -1,0 +1,26 @@
+[project]
+name = "toolit-architecture-decision-records"
+version = "0.1.0"
+description = "Toolit Plugin used for creating architecture decision records (ADR's) from a template using CLI commands."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "toolit>=0.2.0",
+]
+
+[tool.setuptools]  
+packages = ["src"]
+
+[build-system]
+requires = ["setuptools>=61.0"]  
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.package-data]
+src = ["*.jinja2"]
+
+[project.entry-points.toolit_plugins]
+adr_init = "src.architecture_decision_records:adr_init"
+adr_new = "src.architecture_decision_records:adr_new"
+
+# Do a local edititable install of toolit with the command (using uv):
+# uv pip install -e ../toolit
