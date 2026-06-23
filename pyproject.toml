@@ -5,6 +5,7 @@ description = "Toolit Plugin used for creating architecture decision records (AD
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
+    "jinja2>=3.1.6",
     "toolit>=0.2.0",
 ]
 
