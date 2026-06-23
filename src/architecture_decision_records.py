@@ -18,7 +18,7 @@ def _today() -> str:
 
 def _create_adr_filename(name: str, ordinal: int) -> str:
     safe = "-".join(name.lower().split())
-    return f"{ordinal:04d}-{safe}.md"
+    return f"{ordinal:03d}-{safe}.md"
 
 
 def _next_ordinal() -> int:
